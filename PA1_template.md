@@ -14,7 +14,7 @@ library(dplyr)
 library(ggplot2)
 library(lubridate)
 
-activity.df <- tbl_df(read.csv('./data/activity.csv')) %>%
+activity.df <- tbl_df(read.csv(unz("activity.zip", "activity.csv"))) %>%
   mutate(date = ymd(date))
 head(activity.df)
 ```

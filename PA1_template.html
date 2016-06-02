@@ -126,7 +126,7 @@ $(document).ready(function () {
 library(ggplot2)
 library(lubridate)
 
-activity.df &lt;- tbl_df(read.csv('./data/activity.csv')) %&gt;%
+activity.df &lt;- tbl_df(read.csv(unz(&quot;activity.zip&quot;, &quot;activity.csv&quot;))) %&gt;%
   mutate(date = ymd(date))
 head(activity.df)</code></pre>
 <pre><code>## Source: local data frame [6 x 3]
